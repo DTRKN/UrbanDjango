@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Игры</title>
+</head>
+<body>
+    <h1>Игры</h1>
+    <ul>
+        {% for game in products %}
+            <li>        
+                {{ game }} 
+                <button>Купить</button>
+            </li>
+        {% endfor %}
+    </ul>
+    <a href="{% url 'platform' %}">
+        <button>Вернуться обратно</button>
+    </a>
+</body>
+</html>

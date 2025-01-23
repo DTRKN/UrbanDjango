@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Корзина</title>
+</head>
+<body>
+    <h1>Корзина</h1>
+
+    {% if cart_items %}
+        <p>Ваши товары:</p>
+        <ul>
+            {% for item in cart_items %}
+                <li>{{ item }}</li>
+            {% endfor %}
+        </ul>
+    {% else %}
+        <h2>Ваша корзина пуста</h2>
+    {% endif %}
+    
+    <a href="{% url 'platform' %}">
+        <button>Вернуться обратно</button>
+    </a>
+</body>
+</html>
